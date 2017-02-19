@@ -23,6 +23,8 @@ public class MainPresenterTest {
     public void configure() throws Exception {
 
         Mockito.when(mockView.isInternetAvaialble()).thenReturn(true);
+        Mockito.doNothing().when(mockView).performLogin();
+        Mockito.doNothing().when(mockView).showMainView();
 
         MockUtils.verifyNoUnstubbedInteractions(mockView);
 
